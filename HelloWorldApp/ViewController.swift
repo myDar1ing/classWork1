@@ -9,16 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var button: UIButton!
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var label1: UILabel!
+    // @IBOutlet weak var button: UIButton!
+   // @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Hello, world!")
+        //print("Hello, world!")
     }
 
-
-    @IBAction func makeSomeGreeting(_ sender: Any) {
-        
+    @IBAction func clickButton(_ sender: UIButton, forEvent event: UIEvent) {
+        label1.text = "Now click the clear button"
+    }
+    
+    @IBAction func ClearButton(_ sender: UIButton, forEvent event: UIEvent) {
+        label1.text = " "
     }
 }
 
